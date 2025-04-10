@@ -1784,6 +1784,6 @@ class SubstrateTab(object):
 
         if self.colab_flag:
             plt.show()
-    self.png_frame += 1 
-    png_file = os.path.join(self.output_dir, f"frame{self.png_frame:04d}.png") 
-    self.fig.savefig(png_file)
+        self.png_frame += 1 
+        png_file = os.path.join(self.output_dir, f"frame{self.png_frame:04d}.png") 
+        self.fig.savefig(png_file)
