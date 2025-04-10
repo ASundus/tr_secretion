@@ -54,7 +54,7 @@ warnings.filterwarnings("ignore")
 class SubstrateTab(object):
 
     def __init__(self):
-        
+        self.png_frame=0
         self.tb_count = 0
 
         self.output_dir = '.'
@@ -1769,8 +1769,8 @@ class SubstrateTab(object):
             # print('plot_svg with frame=',self.svg_frame)
             self.plot_svg(self.svg_frame)
             # cbar = self.fig.colorbar(substrate_plot, ax=self.ax0)
-            #self.png_frame += 1 
-            png_file = os.path.join(self.output_dir, f"frame{self.substrate_frame:04d}.png") 
+            self.png_frame += 1 
+            png_file = os.path.join(self.output_dir, f"frame{self.png_frame:04d}.png") 
             self.fig.savefig(png_file)
 
 
