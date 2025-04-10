@@ -1774,16 +1774,16 @@ class SubstrateTab(object):
             self.fig.savefig(png_file)
 
 
-        if (self.analysis_data_toggle.value):
+       # if (self.analysis_data_toggle.value):
         # if (self.substrate_frame > 0):  # rwh: when to plot extra analysis (custom data)?
             # print('analysis_data_toggle.value =',self.analysis_data_toggle.value )
             # self.plot_analysis_data("time", ["assembled_virion"], -1)
             # print('self.substrate_frame = ',self.substrate_frame)
-            self.substrate_frame = int(frame / self.modulo)
+           self.substrate_frame = int(frame / self.modulo)
             # self.plot_analysis_data("time", ["assembled_virion"], self.substrate_frame)
-            self.plot_analysis_data(self.substrate_frame)
-        else:
-            self.plot_empty_analysis_data()
+          self.plot_analysis_data(self.substrate_frame)
+      #  else:
+       #     self.plot_empty_analysis_data()
 
         if self.colab_flag:
             plt.show()
